@@ -5,8 +5,8 @@ raken met het Http-protocol in een simpele Java-server.
 
 Een Web server die op het internet gebruikt wordt om webpagina's te tonen, is feitelijk server-software die voldoet aan het Http-protocol. Hoe een internet 
 protocol er uit zou moeten zien wordt besloten door een groep mensen, genaamd de Internet Engineering Task Force (IETF).
-Deze besluiten worden uitgebracht als een *Request for Comments* (RFC). De RFC voor het Http-protocol kan hier gevonden worden: 
-[RFC7230](https://datatracker.ietf.org/doc/html/rfc7230).
+Deze besluiten worden uitgebracht als een *Request for Comments* (RFC). De RFC voor het Http-protocol versie 1.1 kan hier gevonden worden: 
+[RFC7230](https://datatracker.ietf.org/doc/html/rfc7230). Voor versie 2 staat deze hier: [RFC7540](https://datatracker.ietf.org/doc/html/rfc7540).
 
 Hieronder volgen een aantal oefeningen, waarbij je in verschillende klassen wijzigingen moet maken. Zorg dat je tenminste 
 na elke oefening de nodigde _refactors_ doet om de code overzichtelijk te houden.
