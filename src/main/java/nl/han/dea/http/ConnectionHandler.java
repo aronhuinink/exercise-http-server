@@ -13,7 +13,7 @@ public class ConnectionHandler {
         HtmlPageReader pageReader = new HtmlPageReader();
 
         return "HTTP/1.1 200 OK\n" +
-                "Date: Mon, 27 Aug 2018 14:08:55 +0200\n" +
+                "Date: " + pageReader.getDate() +
                 "HttpServer: Simple DEA Webserver\n" +
                 "Content-Length: " + pageReader.getContentLength() + "\n" +
                 "Content-Type: text/html\n";
