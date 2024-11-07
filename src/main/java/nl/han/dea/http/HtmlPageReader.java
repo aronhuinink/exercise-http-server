@@ -19,4 +19,9 @@ public class HtmlPageReader {
             throw new RuntimeException(e);
         }
     }
+
+    public int getContentLength() {
+        System.out.println(readFile("index.html").length());
+        return readFile("index.html").length();
+    }
 }

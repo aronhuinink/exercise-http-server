@@ -6,24 +6,19 @@ import java.nio.charset.StandardCharsets;
 
 public class ConnectionHandler {
 
-    private static final String HTTP_HEADERS = "HTTP/1.1 200 OK\n" +
-            "Date: Mon, 27 Aug 2018 14:08:55 +0200\n" +
-            "HttpServer: Simple DEA Webserver\n" +
-            "Content-Length: 190\n" +
-            "Content-Type: text/html\n";
+    private static final String HTTP_HEADERS = buildHTTP_header();
 
-    private static final String HTTP_BODY = "<!DOCTYPE html>\n" +
-            "<html lang=\"en\">\n" +
-            "<head>\n" +
-            "<meta charset=\"UTF-8\">\n" +
-            "<title>Simple Http Server</title>\n" +
-            "</head>\n" +
-            "<body>\n" +
-            "<h1>Hi DEA folks!</h1>\n" +
-            "<p>This is a simple line in html.</p>\n" +
-            "</body>\n" +
-            "</html>\n" +
-            "\n";
+    private static String buildHTTP_header() {
+
+        HtmlPageReader pageReader = new HtmlPageReader();
+
+        return "HTTP/1.1 200 OK\n" +
+                "Date: Mon, 27 Aug 2018 14:08:55 +0200\n" +
+                "HttpServer: Simple DEA Webserver\n" +
+                "Content-Length: " + pageReader.getContentLength() + "\n" +
+                "Content-Type: text/html\n";
+    }
+
 
     private Socket socket;
 
