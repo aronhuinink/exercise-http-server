@@ -12,6 +12,19 @@ public class ConnectionHandler {
             "Content-Length: 190\n" +
             "Content-Type: text/html\n";
 
+    private static final String HTTP_BODY = "<!DOCTYPE html>\n" +
+            "<html lang=\"en\">\n" +
+            "<head>\n" +
+            "<meta charset=\"UTF-8\">\n" +
+            "<title>Simple Http Server</title>\n" +
+            "</head>\n" +
+            "<body>\n" +
+            "<h1>Hi DEA folks!</h1>\n" +
+            "<p>This is a simple line in html.</p>\n" +
+            "</body>\n" +
+            "</html>\n" +
+            "\n";
+
     private Socket socket;
 
     public ConnectionHandler(Socket socket) {

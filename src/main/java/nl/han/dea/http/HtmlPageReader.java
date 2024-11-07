@@ -8,11 +8,11 @@ public class HtmlPageReader {
     public String readFile(String filename) {
         var fullFileName = "pages/".concat(filename);
         try {
-            ClassLoader classLoader = getClass().getClassLoader();
+            
 
-            var file = new File(classLoader.getResource(fullFileName).getFile()).toPath();
+            var file = getClass().getClassLoader().getResourceAsStream(fullFileName);
 
-            var fileAsString = new String(Files.readAllBytes(file));
+            var fileAsString = new String(file.readAllBytes());
 
             return fileAsString;
         } catch (IOException e) {
